@@ -1,0 +1,45 @@
+{
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /movie-project/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr0xnov/movie-project.git"
+  },
+  "keywords": [],
+  "author": "Pasha Prohnov <pr0xnov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pr0xnov/movie-project/issues"
+  },
+  "homepage": "https://pr0xnov.github.io/movie-project/",
+  "staticFiles": {
+    "staticPath": [
+      "src/images/team",
+      "src/images/sprite.svg",
+      "src/images/empty-card.png"
+    ]
+  },
+  "devDependencies": {
+    "axios": "^0.22.0",
+    "lodash.debounce": "^4.0.8",
+    "modern-normalize": "^1.1.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^3.1.5",
+    "basiclightbox": "^5.0.4",
+    "notiflix": "^3.1.0",
+    "tui-pagination": "^3.4.1"
+  }
+}

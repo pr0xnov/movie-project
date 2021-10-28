@@ -1,0 +1,291 @@
+.modal-movie {
+  background-color: $white-text-color;
+  padding: 50px 20px;
+  width: 100%;
+  max-width: 280px;
+  @include respond-below($tablet) {
+    margin-bottom: calc(var(--vh, 1vh) * 10);
+  }
+  @include respond-above($tablet) {
+    padding: 40px 30px;
+    min-width: 618px;
+    max-width: 618px;
+    display: flex;
+  }
+  @include respond-above($desktop) {
+    padding: 50px 32px 40px;
+    min-width: 882px;
+    max-width: 882px;
+  }
+}
+
+.modal-movie__close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 40px;
+  padding: 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: $white-text-color;
+  color: $btn-secondary-color;
+
+  transition: color $animation;
+
+  &:hover {
+    color: $btn-accent-bg-color;
+  }
+}
+
+.modal-movie__poster {
+  margin-right: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 240px;
+  height: 356px;
+
+  @include respond-above($tablet) {
+    max-width: 264px;
+    height: 374px;
+  }
+
+  @include respond-above($desktop) {
+    max-width: 386px;
+    height: 500px;
+  }
+}
+
+.modal-movie__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-movie__description {
+  @include respond-above($tablet) {
+    max-width: 260px;
+    margin-left: 30px;
+  }
+  @include respond-above($desktop) {
+    min-width: 400px;
+    min-height: 480px;
+    margin-left: 32px;
+  }
+}
+
+.modal-movie_name {
+  text-transform: uppercase;
+  font-weight: 500;
+  @include respond-below($tablet) {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 0.9;
+  }
+
+  @include respond-below($desktop) {
+    font-size: 20px;
+    line-height: 1.17;
+  }
+  @include respond-above($desktop) {
+    font-size: 30px;
+    line-height: 1.16;
+  }
+}
+
+.modal-movie__table {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.modal-movie__history {
+  margin-top: 20px;
+  width: 130px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: $modal-grey-title-color;
+  @include respond-above($tablet) {
+    width: 105px;
+  }
+}
+
+.vote {
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  min-width: 36px;
+  font-size: 12px;
+  line-height: 1.7;
+  background-color: $rating-bg-color;
+  color: $white-text-color;
+}
+
+.votes {
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  min-width: 36px;
+  font-size: 12px;
+  line-height: 1.7;
+  background-color: $footer-bg-color;
+}
+
+.modal-movie__show {
+  margin-top: 10px;
+}
+
+.modal-movie__original {
+  text-transform: uppercase;
+}
+
+.overviev-title {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.modal-movie__youtube {
+  border: none;
+  cursor: pointer;
+  background-color: $white-text-color;
+}
+
+.modal-movie__overview {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.67;
+}
+
+.modal-movie__btn-list {
+  text-align: center;
+  display: flex;
+}
+
+.modal-movie__btn-item {
+  text-transform: uppercase;
+  margin-top: 20px;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.youtube-btn {
+  padding: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $movie-title-black-color;
+  line-height: 1.33;
+  font-weight: 500;
+  margin-top: auto;
+  border-radius: 5px;
+  width: 135px;
+  height: 44px;
+  border: $btn-border;
+  border-color: $movie-title-black-color;
+  cursor: pointer;
+  background-color: $btn-bg-color;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+
+  transition: $btn-animation;
+
+  @include respond-below($desktop) {
+    width: 122px;
+  }
+
+  @include respond-below($tablet) {
+    width: 112px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $btn-primary-color;
+    background-color: $btn-accent-bg-color;
+    border: 1px solid $btn-accent-bg-color;
+  }
+}
+
+.youtube-btn--inactive {
+  display: none;
+}
+
+.youtube__btn-icon {
+  width: 33px;
+  height: 30px;
+  pointer-events: none;
+
+  @include respond-below($desktop) {
+    width: 44px;
+  }
+
+  animation: pulsing 2s infinite;
+  @keyframes pulsing {
+    0% {
+      transform: scale(0.9, 0.9);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(0.9, 0.9);
+    }
+  }
+}
+
+.modal-youtube__close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 36px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color $animation;
+
+  &:hover {
+    color: $btn-accent-bg-color;
+  }
+}
+
+.modal-youtube {
+  background-color: $white-text-color;
+  padding-top: 35px;
+}
+
+.modal-youtube__iframe-container {
+  display: flex;
+  width: 100%;
+}
+
+.modal-youtube__iframe {
+  width: 100%;
+  height: 168px;
+
+  @include respond-above($tablet) {
+    width: 516px;
+    min-height: 290px;
+  }
+
+  @include respond-above($desktop) {
+    width: 768px;
+    min-height: 432px;
+  }
+  // max-width: 516px;
+  // max-height: 316px;
+  // @include respond-above($tablet) {
+  //   width: 900px;
+  //   height: 700px;
+  // }
+}

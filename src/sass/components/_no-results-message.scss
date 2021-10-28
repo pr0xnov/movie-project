@@ -1,0 +1,53 @@
+.message-container {
+  position: absolute;
+  top: 230px;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.message__text {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  color: $genre-orange-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 24px;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 32px;
+  }
+}
+
+.message__image {
+  width: 100%;
+  height: 174px;
+
+  background-image: url(../images/film-rolls.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include respond-above($tablet) {
+    width: 400px;
+    height: 290px;
+  }
+
+  @include respond-above($desktop) {
+    width: 440px;
+    height: 320px;
+  }
+}

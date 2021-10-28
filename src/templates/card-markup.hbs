@@ -1,0 +1,38 @@
+{{#each this}}
+  <li class='gallery__item' id={{id}} data-source='{{source_list}}'>
+    <div class='gallery__img-thumb'>
+      <img
+        class='gallery__img'
+        srcset='{{poster_path_W342}} 342w, {{poster_path_W500}} 500w'
+        sizes='(min-width: 2048px) 500px,  342px'
+        src='{{poster_path_W342}}'
+        alt='{{title}}'
+      />
+    </div>
+
+    <div class='gallery__card-nav is-hidden'>
+      <button class='gallery__btn {{#if watched}}activated{{/if}}' type='button' data-action='add-watched' data-id='{{id}}'>
+        <svg class='gallery__icon' width='34' height='34'>
+          <use href='sprite.svg#icon-eye'></use>
+        </svg>
+        <span class='gallery__btn-helper watched-helper'>{{#if watched}}remove from watched{{else}}add to watched{{/if}}</span>
+      </button>
+
+      <button class='gallery__btn {{#if queue}}activated{{/if}}' type='button' data-action='add-queue' data-id='{{id}}'>
+        <svg class='gallery__icon' width='32' height='32'>
+          <use href='sprite.svg#icon-queue'></use>
+        </svg>
+        <span class='gallery__btn-helper queue-helper'>{{#if queue}}remove from queue{{else}}add to queue{{/if}}</span>
+      </button>
+    </div>
+
+    <div class='gallery__info'>
+      <h2 class='gallery__title'>{{title}}</h2>
+      <div class='gallery__help-wrapper'>
+        <span class='gallery__genres'>{{genres}}</span>
+        <span class='gallery__date'>{{release_date}}</span>
+        <span class='gallery__rating'>{{vote_average}}</span>
+      </div>
+    </div>
+  </li>
+{{/each}}
